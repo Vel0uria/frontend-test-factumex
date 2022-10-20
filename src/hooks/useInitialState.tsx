@@ -8,10 +8,6 @@ interface ILoged {
     success: boolean;
   }
 
-// interface IPlace {
-//   isLogin:
-// }
-
   const initialLogged: ILoged = {
     success: false,
   };

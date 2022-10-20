@@ -10,10 +10,7 @@ const Router = () => {
 
 
  const {logged} : any = useContext(ContextProvider)
-console.log(logged);
-useEffect(()=>{
 
-},[logged])
     return(
         <BrowserRouter>
         <Header/>
