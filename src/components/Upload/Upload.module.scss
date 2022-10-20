@@ -1,0 +1,15 @@
+.uploadContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropzone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid darkslateblue;
+    padding:2rem 0;
+    width:50%;
+    height:100%;
+}

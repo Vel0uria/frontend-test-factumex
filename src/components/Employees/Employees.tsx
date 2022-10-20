@@ -19,7 +19,6 @@ const Employees = () => {
         .get(url)
         .then(({ data }) => {
           setDataTable(data.data.employees)
-          console.log(data);  
         })
         .catch((error) => {
           console.log(error)
