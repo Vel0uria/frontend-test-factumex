@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 const initialState = {
-    place: "Login",
     user: null
 } as any;
 
@@ -9,16 +8,25 @@ interface ILoged {
     success: boolean;
   }
 
+// interface IPlace {
+//   isLogin:
+// }
+
   const initialLogged: ILoged = {
     success: false,
   };
 
+  const successLogged: ILoged = {
+    success: true,
+  };
+
+
+
   const useInitialState = () => {
     const [state, setState] = useState(initialState);
-    const [beforeLocation, setBeforeLocation] = useState<string>();
-    const user = localStorage.getItem("user");
+    const user = localStorage.getItem("USER");
     const [logged, setLogged] = useState<ILoged>(
-        user ? JSON.parse(user) : JSON.stringify(initialLogged)
+        user ? successLogged :initialLogged
       );
 
       const handleLogged = (data: ILoged) => {
@@ -26,7 +34,7 @@ interface ILoged {
       };
 
       return{
-        state, beforeLocation, setBeforeLocation, logged, handleLogged
+        state, setState, logged, handleLogged, 
       }
   }
 
