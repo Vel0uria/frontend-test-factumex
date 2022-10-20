@@ -1,0 +1,36 @@
+.employeesContainer{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+}
+
+.tableForm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 90%;
+}
+
+.employeesForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; 
+    width: 400px;
+    height:400px;
+    border: solid 3px darkslateblue;
+    border-radius: 5px;
+    background-color: #ccb4f8;;
+    color:darkslateblue;
+    padding: 0 2rem;
+    p{
+        margin: 0 !important;
+    }
+    button{
+       padding: 0.5rem 0;
+    }
+
+    h3{
+        text-align: center;
+    }
+}

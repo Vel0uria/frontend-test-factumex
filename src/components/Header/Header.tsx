@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import classes from "./Header.module.scss"
 import ContextProvider from "../../context/ContextProvider"
 
@@ -16,9 +16,9 @@ const Header = () => {
       </div>}
       <div>
         {logged.success ? (
-          <NavLink to="/employees">
+          <Link to="/employees">
             <h3>Employees</h3>
-          </NavLink>) : 
+          </Link>) : 
           <h3>Employees</h3>
         }
       </div>

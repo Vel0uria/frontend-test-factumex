@@ -1,14 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, ChangeEvent  } from "react"
+const formState = {} as any
+
 
 const useForm = () => {
-  const [form, setForm] = useState({})
+  const [form, setForm] = useState(formState)
 
-  function handleInputs({event}: any) {
-    event.preventDefault();
-    setForm(prevState => ({
-      ...prevState,
+  function handleInputs(event: ChangeEvent<HTMLInputElement>) {
+event.preventDefault()
+    setForm({
+      ...form,
       [event.target.name]: event.target.value
-    }));
+    });
   }
 
   return [form, handleInputs]
